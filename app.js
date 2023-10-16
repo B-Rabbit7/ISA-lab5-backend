@@ -3,7 +3,7 @@ const http = require('http');
 const url = require('url');
 
 const hostname = '127.0.0.1'; // localhost
-const port = 3030;
+const port = process.env.PORT || 3030;
 
 const con = new Client({
   user: "root",
@@ -139,6 +139,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
