@@ -1,8 +1,6 @@
 const { Client } = require('pg');
 const http = require('http');
 const url = require('url');
-
-const hostname = '127.0.0.1'; // localhost
 const port = process.env.PORT || 3030;
 
 const con = new Client({
